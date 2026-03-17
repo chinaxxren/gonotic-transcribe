@@ -1,0 +1,29 @@
+# 本地开发环境配置
+localhost:3000 {
+    # WebSocket 路由 - 代理到转录服务
+    @websocket path /ws/transcription
+    
+    # 反向代理到内部转录服务 (端口 8090)
+    reverse_proxy @websocket localhost:8090 {
+        # WebSocket 支持配置
+        header_up Host {http.reverse_proxy.upstream.hostport}
+        header_up X-Real-IP {http.request.remote_host}
+        header_up X-Forwarded-For {http.request.remote_host}
+        header_up X-Forwarded-Proto {http.request.scheme}
+        
+        # 连接超时配置
+        transport http {
+            read_timeout 60s
+            write_timeout 60s
+            dial_timeout 10s
+        }
+    }
+    
+    # 其他所有请求返回 404 (转录服务只提供 WebSocket)
+    respond "Not Found: This service only provides WebSocket transcription endpoint at /ws/transcription" 404
+}
+
+# 健康检查端点
+localhost:3001 {
+    respond "OK" 200
+}

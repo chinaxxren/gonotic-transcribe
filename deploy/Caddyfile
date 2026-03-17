@@ -1,0 +1,36 @@
+# gonotic-transcribe Caddy 配置
+# 将转录服务通过 Caddy 反向代理到统一域名
+
+# 主域名配置
+gonotic.com:3000 {
+    # WebSocket 路由 - 代理到转录服务
+    @websocket path /ws/transcription
+    
+    # 反向代理到内部转录服务 (端口 8090)
+    reverse_proxy @websocket 127.0.0.1:8090 {
+        # WebSocket 支持配置
+        header_up Host {http.reverse_proxy.upstream.hostport}
+        header_up X-Real-IP {http.request.remote_host}
+        header_up X-Forwarded-For {http.request.remote_host}
+        header_up X-Forwarded-Proto {http.request.scheme}
+    }
+    
+    # 其他所有请求返回 404 (转录服务只提供 WebSocket)
+    respond "Not Found: This service only provides WebSocket transcription endpoint at /ws/transcription" 404
+    
+    # 日志配置
+    log {
+        output file /var/log/caddy/gonotic-transcribe.log
+        format json
+    }
+}
+
+# 可选：健康检查端点 (如果需要)
+gonotic.com:3001 {
+    respond "OK" 200
+    
+    log {
+        output file /var/log/caddy/health-check.log
+        format json
+    }
+}

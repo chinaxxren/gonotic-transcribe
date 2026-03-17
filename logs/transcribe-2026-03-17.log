@@ -1,0 +1,2 @@
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-17T01:27:41+08:00","C":"transcribe_ws/main.go:51","M":"Starting gonotic-transcribe service","version":"1.0.0","environment":"development","port":8090}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-17T01:27:41+08:00","C":"transcribe_ws/main.go:114","M":"Starting HTTP server","addr":"127.0.0.1:8090"}

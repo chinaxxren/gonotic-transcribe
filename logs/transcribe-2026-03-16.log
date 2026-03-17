@@ -1,0 +1,14 @@
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T22:14:16+08:00","C":"transcribe_ws/main.go:51","M":"Starting gonotic-transcribe service","version":"1.0.0","environment":"development","port":8090}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T22:14:16+08:00","C":"transcribe_ws/main.go:114","M":"Starting HTTP server","addr":"127.0.0.1:8090"}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T22:21:56+08:00","C":"transcribe_ws/main.go:128","M":"Shutting down server..."}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T22:21:56+08:00","C":"transcribe_ws/main.go:138","M":"Server exited"}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T23:23:10+08:00","C":"transcribe_ws/main.go:51","M":"Starting gonotic-transcribe service","version":"1.0.0","environment":"development","port":8090}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T23:23:10+08:00","C":"transcribe_ws/main.go:114","M":"Starting HTTP server","addr":"127.0.0.1:8090"}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T23:35:06+08:00","C":"transcribe_ws/main.go:128","M":"Shutting down server..."}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T23:35:06+08:00","C":"transcribe_ws/main.go:138","M":"Server exited"}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T23:35:53+08:00","C":"transcribe_ws/main.go:51","M":"Starting gonotic-transcribe service","version":"1.0.0","environment":"development","port":8090}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-16T23:35:53+08:00","C":"transcribe_ws/main.go:114","M":"Starting HTTP server","addr":"127.0.0.1:8090"}
+{"L":"\u001b[35mDEBUG\u001b[0m","T":"2026-03-16T23:41:45+08:00","C":"middleware/auth.go:90","M":"用户认证成功","user_id":123,"email":""}
+{"L":"\u001b[35mDEBUG\u001b[0m","T":"2026-03-16T23:41:45+08:00","C":"handlers/websocket.go:73","M":"允许所有源（开发模式）","origin":""}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-17T01:27:35+08:00","C":"transcribe_ws/main.go:128","M":"Shutting down server..."}
+{"L":"\u001b[34mINFO\u001b[0m","T":"2026-03-17T01:27:35+08:00","C":"transcribe_ws/main.go:138","M":"Server exited"}
